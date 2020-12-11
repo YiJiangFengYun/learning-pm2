@@ -30,16 +30,16 @@
         // To prepare the host by installing required software (eg: git)
         // even before the setup process starts
         // can be multiple commands separated by the character ";"
-        // or path to a script on your local machine
+        // or path to a script on your local host machine
         "pre-setup" : "./pre-setup.sh",
-        // Commands or path to a script on the host machine
+        // Commands or path to a script on the remote host machine
         // This will be executed on the host after cloning the repository
         // eg: placing configurations in the shared dir etc
         "post-setup": "sh ~/deploy/source/post-setup.sh",
         // Commands to execute locally (on the same machine you deploy things)
         // Can be multiple commands separated by the character ";"
         "pre-deploy-local" : "echo 'This is a local executed command'",
-        // Commands to be executed on the server after the repo has been cloned
+        // Commands to be executed on the remote host machine after the repo has been cloned
         "post-deploy" : "echo 'Commonds after deploying' && pm2 startOrRestart ecosystem.json --env production",
         // Environment variables that must be injected in all applications on this env
         "env": {
