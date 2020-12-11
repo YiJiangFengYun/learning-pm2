@@ -20,22 +20,22 @@
         // Multi host is possible, just by passing IPs/hostname as an array
         "host" : ["192.168.56.110"],
         // path to the public key to authenticate
-        "key": "$HOME/.ssh/id_rsa.pub",
+        "key": "~/.ssh/id_rsa",
         // Branch
         "ref"  : "origin/master",
         // Git repository to clone
-        "repo" : "git@github.com:YiJiangFengYun/learning-pm2.git",
+        "repo" : "https://github.com/YiJiangFengYun/learning-pm2.git",
         // Path of the application on target servers
-        "path" : "$HOME/deploy",
+        "path" : "~/deploy",
         // To prepare the host by installing required software (eg: git)
         // even before the setup process starts
         // can be multiple commands separated by the character ";"
         // or path to a script on your local machine
-        "pre-setup" : "echo 'commands or a script path to be run on the host before the setup process starts",
-        // Commands / path to a script on the host machine
+        "pre-setup" : "./pre-setup.sh",
+        // Commands or path to a script on the host machine
         // This will be executed on the host after cloning the repository
         // eg: placing configurations in the shared dir etc
-        "post-setup": "echo 'commands or a script path to be run on the host after cloning the repo'",
+        "post-setup": "~/deploy/source/post-setup.sh",
         // Commands to execute locally (on the same machine you deploy things)
         // Can be multiple commands separated by the character ";"
         "pre-deploy-local" : "echo 'This is a local executed command'",
