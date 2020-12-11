@@ -40,7 +40,7 @@
         // Can be multiple commands separated by the character ";"
         "pre-deploy-local" : "echo 'This is a local executed command'",
         // Commands to be executed on the server after the repo has been cloned
-        "post-deploy" : "echo 'commonds after deploying' && npm install && pm2 startOrRestart ecosystem.json --env production",
+        "post-deploy" : "echo 'Commonds after deploying' && pm2 startOrRestart ecosystem.json --env production",
         // Environment variables that must be injected in all applications on this env
         "env": {
           "DEPLOY_PRODUCTION": "true"
