@@ -1,0 +1,1 @@
+console.info(`This is a project of learning pm2.`);
