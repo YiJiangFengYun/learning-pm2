@@ -20,13 +20,13 @@
         // Multi host is possible, just by passing IPs/hostname as an array
         "host" : ["192.168.56.110"],
         // path to the public key to authenticate
-        "key": ".ssh/id_rsa.pub",
+        "key": "$HOME/.ssh/id_rsa.pub",
         // Branch
         "ref"  : "origin/master",
         // Git repository to clone
         "repo" : "git@github.com:YiJiangFengYun/learning-pm2.git",
         // Path of the application on target servers
-        "path" : "deploy",
+        "path" : "$HOME/deploy",
         // To prepare the host by installing required software (eg: git)
         // even before the setup process starts
         // can be multiple commands separated by the character ";"
